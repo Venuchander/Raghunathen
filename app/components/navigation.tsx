@@ -15,7 +15,8 @@ export default function Navigation() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-white text-xl font-bold">
-            Raghunathen
+            <span className="sm:hidden">R</span>
+            <span className="hidden sm:inline">Raghunathen</span>
           </Link>
           <button
             className="lg:hidden text-white focus:outline-none"

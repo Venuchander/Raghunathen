@@ -21,10 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/major-projects/page.js"
     ],
-    "/papers/page": [
+    "/major-projects/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/papers/page.js"
+      "static/chunks/app/major-projects/[id]/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

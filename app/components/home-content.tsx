@@ -7,7 +7,7 @@ export default function HomeContent() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20 text-center max-w-4xl">
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent leading-normal"
+        className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent leading-normal"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
