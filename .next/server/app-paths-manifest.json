@@ -1,8 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/major-projects/page": "app/major-projects/page.js",
   "/minor-projects/page": "app/minor-projects/page.js",
-  "/major-projects/[id]/page": "app/major-projects/[id]/page.js",
+  "/major-projects/page": "app/major-projects/page.js",
   "/papers/page": "app/papers/page.js"
 }

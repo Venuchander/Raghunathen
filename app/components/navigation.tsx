@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,44 +11,53 @@ export default function Navigation() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-white text-xl font-bold">
             Raghunathen
           </Link>
           <button
-            className="md:hidden text-white"
+            className="lg:hidden text-white focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <ul className={`flex flex-col md:flex-row md:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} md:flex absolute md:relative top-full left-0 right-0 bg-black/50 md:bg-transparent p-4 md:p-0`}>
-            <li>
-              <Link href="/" className="block py-2 text-white hover:text-purple-300 transition-colors" onClick={toggleMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/major-projects" className="block py-2 text-white hover:text-purple-300 transition-colors" onClick={toggleMenu}>
-                Major Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/minor-projects" className="block py-2 text-white hover:text-purple-300 transition-colors" onClick={toggleMenu}>
-                Minor Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/papers" className="block py-2 text-white hover:text-purple-300 transition-colors" onClick={toggleMenu}>
-                Papers
-              </Link>
-            </li>
-          </ul>
+          <div className="hidden lg:flex space-x-6">
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/major-projects">Major Projects</NavLink>
+            <NavLink href="/minor-projects">Minor Projects</NavLink>
+            <NavLink href="/papers">Papers</NavLink>
+          </div>
         </div>
       </div>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden"
+          >
+            <div className="px-4 py-2 bg-black">
+              <NavLink href="/" onClick={toggleMenu}>Home</NavLink>
+              <NavLink href="/major-projects" onClick={toggleMenu}>Major Projects</NavLink>
+              <NavLink href="/minor-projects" onClick={toggleMenu}>Minor Projects</NavLink>
+              <NavLink href="/papers" onClick={toggleMenu}>Papers</NavLink>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
+  )
+}
+
+function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
+  return (
+    <Link href={href} className="block py-2 text-white hover:text-purple-300 transition-colors" onClick={onClick}>
+      {children}
+    </Link>
   )
 }
 
