@@ -29,28 +29,28 @@ const papers = [
 
 export default function PapersGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       {papers.map((paper, index) => (
         <motion.div
           key={paper.title}
-          className="glass-card rounded-xl p-6 project-card-hover"
+          className="glass-card rounded-xl p-4 sm:p-6 project-card-hover"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
         >
           <div className="flex items-start mb-4">
-            <FileText className="w-6 h-6 mr-2 flex-shrink-0 text-purple-300" />
-            <h3 className="text-xl font-semibold">{paper.title}</h3>
+            <FileText className="w-5 h-5 sm:w-6 sm:h-6 mr-2 flex-shrink-0 text-purple-300" />
+            <h3 className="text-lg sm:text-xl font-semibold">{paper.title}</h3>
           </div>
-          <p className="text-gray-400 mb-4">{paper.description}</p>
-          <p className="text-sm text-gray-500 mb-2">{paper.publication}, {paper.year}</p>
+          <p className="text-sm sm:text-base text-gray-400 mb-4">{paper.description}</p>
+          <p className="text-xs sm:text-sm text-gray-500 mb-2">{paper.publication}, {paper.year}</p>
           <a
             href={paper.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors"
+            className="flex items-center gap-2 text-white hover:text-purple-300 transition-colors text-sm sm:text-base"
           >
-            <ExternalLink className="w-5 h-5" />
+            <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>Read Paper</span>
           </a>
         </motion.div>

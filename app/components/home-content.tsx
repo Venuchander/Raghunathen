@@ -7,7 +7,7 @@ export default function HomeContent() {
   return (
     <div className="container mx-auto px-4 py-20 text-center max-w-4xl">
       <motion.h1
-        className="text-6xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
+        className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -16,7 +16,7 @@ export default function HomeContent() {
       </motion.h1>
       
       <motion.h2
-        className="text-2xl mb-8 text-gray-300"
+        className="text-xl sm:text-2xl mb-8 text-gray-300"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
@@ -25,7 +25,7 @@ export default function HomeContent() {
       </motion.h2>
 
       <motion.p
-        className="text-lg mb-12 text-gray-400 leading-relaxed"
+        className="text-base sm:text-lg mb-12 text-gray-400 leading-relaxed"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -38,30 +38,30 @@ export default function HomeContent() {
       </motion.p>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <div className="glass-card rounded-2xl p-6">
-          <h3 className="text-xl font-semibold mb-4">Frontend Mastery</h3>
-          <p className="text-gray-400">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">Frontend Mastery</h3>
+          <p className="text-sm sm:text-base text-gray-400">
             Crafting intuitive and responsive user interfaces using React, Vue, and 
             modern CSS frameworks.
           </p>
         </div>
 
         <div className="glass-card rounded-2xl p-6">
-          <h3 className="text-xl font-semibold mb-4">Backend Mastery</h3>
-          <p className="text-gray-400">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">Backend Mastery</h3>
+          <p className="text-sm sm:text-base text-gray-400">
             Building robust and scalable server-side solutions with Node.js, Python, 
             and cloud technologies.
           </p>
         </div>
 
         <div className="glass-card rounded-2xl p-6">
-          <h3 className="text-xl font-semibold mb-4">UI/UX Innovation</h3>
-          <p className="text-gray-400">
+          <h3 className="text-lg sm:text-xl font-semibold mb-4">UI/UX Innovation</h3>
+          <p className="text-sm sm:text-base text-gray-400">
             Creating engaging and user-centered design experiences that blend 
             aesthetics with functionality.
           </p>
@@ -76,19 +76,19 @@ export default function HomeContent() {
       >
         <Link
           href="/major-projects"
-          className="glass-card px-6 py-3 rounded-full hover:bg-white/10 transition-colors"
+          className="glass-card px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-white/10 transition-colors text-sm sm:text-base"
         >
           Major Projects
         </Link>
         <Link
           href="/minor-projects"
-          className="glass-card px-6 py-3 rounded-full hover:bg-white/10 transition-colors"
+          className="glass-card px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-white/10 transition-colors text-sm sm:text-base"
         >
           Minor Projects
         </Link>
         <Link
           href="/papers"
-          className="glass-card px-6 py-3 rounded-full hover:bg-white/10 transition-colors"
+          className="glass-card px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-white/10 transition-colors text-sm sm:text-base"
         >
           Papers
         </Link>
@@ -102,7 +102,7 @@ export default function HomeContent() {
         <a
           href="/resume.pdf"
           download
-          className="glass-card px-6 py-3 rounded-full hover:bg-white/10 transition-colors inline-block"
+          className="glass-card px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-white/10 transition-colors inline-block text-sm sm:text-base"
         >
           Download CV
         </a>
