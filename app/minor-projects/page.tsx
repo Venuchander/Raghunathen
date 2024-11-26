@@ -1,5 +1,4 @@
 import Navigation from '../components/navigation'
-import SocialFooter from '../components/social-footer'
 import MinorProjectsGrid from '../components/minor-projects-grid'
 
 export default function MinorProjects() {
@@ -12,7 +11,6 @@ export default function MinorProjects() {
         </h1>
         <MinorProjectsGrid />
       </div>
-      <SocialFooter />
     </main>
   )
 }

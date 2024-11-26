@@ -1,5 +1,4 @@
 import Navigation from '../components/navigation'
-import SocialFooter from '../components/social-footer'
 import PapersGrid from '../components/papers-grid'
 
 export default function Papers() {
@@ -12,7 +11,6 @@ export default function Papers() {
         </h1>
         <PapersGrid />
       </div>
-      <SocialFooter />
     </main>
   )
 }

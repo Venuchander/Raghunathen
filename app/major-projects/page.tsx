@@ -1,5 +1,4 @@
 import Navigation from '../components/navigation'
-import SocialFooter from '../components/social-footer'
 import MajorProjectsGrid from '../components/major-projects-grid'
 
 export default function MajorProjects() {
@@ -12,7 +11,6 @@ export default function MajorProjects() {
         </h1>
         <MajorProjectsGrid />
       </div>
-      <SocialFooter />
     </main>
   )
 }

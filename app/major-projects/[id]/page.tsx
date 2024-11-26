@@ -2,7 +2,6 @@
 
 import { useParams } from 'next/navigation'
 import Navigation from '../../components/navigation'
-import SocialFooter from '../../components/social-footer'
 import ProjectDetails from '../../components/project-details'
 
 export default function ProjectPage() {
@@ -15,7 +14,6 @@ export default function ProjectPage() {
       <div className="container mx-auto px-4 py-20">
         <ProjectDetails projectId={projectId} />
       </div>
-      <SocialFooter />
     </main>
   )
 }
