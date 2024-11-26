@@ -1,27 +1,33 @@
-'use client'
-
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import { usePathname } from 'next/navigation'
-import { motion } from 'framer-motion'
 
 export default function Navigation() {
-  const pathname = usePathname()
-
   return (
-    <motion.nav 
-      className="fixed top-0 w-full z-50 flex justify-between items-center p-8"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-
-      {pathname !== '/' && (
-        <Link href="/" className="p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors">
-          <ArrowLeft className="w-6 h-6" />
-        </Link>
-      )}
-    </motion.nav>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md">
+      <div className="container mx-auto px-4 py-4">
+        <ul className="flex justify-center space-x-6">
+          <li>
+            <Link href="/" className="text-white hover:text-purple-300 transition-colors">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/major-projects" className="text-white hover:text-purple-300 transition-colors">
+              Major Projects
+            </Link>
+          </li>
+          <li>
+            <Link href="/minor-projects" className="text-white hover:text-purple-300 transition-colors">
+              Minor Projects
+            </Link>
+          </li>
+          <li>
+            <Link href="/papers" className="text-white hover:text-purple-300 transition-colors">
+              Papers
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   )
 }
 

@@ -16,7 +16,7 @@ export default function AboutMe() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Raghunathen
+        John Doe
       </motion.h1>
       <motion.h2 
         className="text-3xl mb-8 text-gray-300"
